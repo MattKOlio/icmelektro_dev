@@ -8,6 +8,9 @@
   --max-width: 1440px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 /* Custom default button */
 .btn-light,
@@ -23,7 +26,8 @@
  */
 
 body {
-  height: 100vh;
+  min-height: calc(100vh - 75px);
+  margin-top: 75px;
 
   background-color: rgba(255, 255, 255, .8);
   background-size: cover;
@@ -32,6 +36,10 @@ body {
 
 .cover-container {
   max-width: var(--max-width);
+}
+
+i {
+  color: black;
 }
 
 
@@ -44,7 +52,8 @@ h3 {
 }
 
 .navbar-nav .nav-link {
-  color: rgba($color: var(--bs-dark-rgb), $alpha: 0.3);
+  color: rgba($color: var(--bs-dark-rgb), $alpha: 0.5);
+  font-weight: 400;
   border-bottom: .25rem solid transparent;
 }
 
@@ -59,8 +68,9 @@ h3 {
   margin-left: 1rem;
 }
 
-.navbar-nav .active {
+.navbar-nav .active{
   color: var(--bs-dark);
+  font-weight: 500;
 
   @media (min-width: 992px) {
     border-bottom-color: rgba($color: var(--bs-dark-rgb), $alpha: 0.5);
@@ -93,4 +103,12 @@ h3 {
 
 .icm-logo {
   max-height: 45px;
+}
+
+.about-container {
+  height: 100%;
+
+  .btn {
+    width: fit-content;
+  }
 }
